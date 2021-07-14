@@ -7,7 +7,7 @@ function ProductCard({ id, name, price, image, description }) {
             <img alt="#" src={`./images/${image}`} className="card_icon" />
             <div className="wrapper_card">
                 <h3>{name}</h3>
-                <h3>{price}</h3>
+                <h3>{price} UAH</h3>
                 <p>{description}</p>
             </div>
         </div>

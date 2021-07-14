@@ -1,4 +1,4 @@
-function FilterPanel() {
+function FilterPanel({ sorting, setSorting }) {
     return (
         <div className="filter">
             <div className="price">
@@ -24,17 +24,19 @@ function FilterPanel() {
             </div>
             <div className="sort">
                 <h2>Сортировка</h2>
-                <div>
-                    <input type="radio" id="sort_up" name="sort" value="sort_up" />
-                    <label htmlFor="sort_up">по возрастанию цены</label>
-                </div>
-                <div>
-                    <input type="radio" id="sort_down" name="sort" value="sort_down" />
-                    <label htmlFor="sort_down">по убыванию цены</label>
-                </div>
-                <div>
-                    <input type="radio" id="sort_alphabet" name="sort" value="sort_alphabet" />
-                    <label htmlFor="sort_alphabet">по алфавиту</label>
+                <div className="radio-buttons">
+                    <div>
+                        <input type="radio" id="sort_up" name="sort" value="price_ascending" defaultChecked={sorting === 'price_ascending'} onChange={() => setSorting('price_ascending')} />
+                        <label htmlFor="sort_up">по возрастанию цены</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sort_down" name="sort" value="price_descending" defaultChecked={sorting === 'price_descending'} onChange={() => setSorting('price_descending')} />
+                        <label htmlFor="sort_down">по убыванию цены</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sort_alphabet" name="sort" value="alphabetical" defaultChecked={sorting === 'alphabetical'} onChange={() => setSorting('alphabetical')} />
+                        <label htmlFor="sort_alphabet">по алфавиту</label>
+                    </div>
                 </div>
             </div>
         </div>
