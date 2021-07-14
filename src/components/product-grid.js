@@ -1,15 +1,10 @@
 import ProductCard from './product-card'
 
-function ProductGrid() {
+
+function ProductGrid({products}) {
     return (
         <div className="products">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {products.map(ProductCard)}
         </div>
     )
 }

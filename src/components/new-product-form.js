@@ -4,15 +4,15 @@ function NewProductForm() {
             <form>
                 <div className="form_left_add_product">
                     <div>
-                        <label for="name_add_product">Имя</label>
+                        <label htmlFor="name_add_product">Имя</label>
                         <input id="name_add_product" type="text" placeholder="Name" />
                     </div>
                     <div>
-                        <label for="price_add_product">Цена</label>
+                        <label htmlFor="price_add_product">Цена</label>
                         <input id="price_add_product" type="number" placeholder="1000" />
                     </div>
                     <div>
-                        <label for="add_product_button">Изображение</label>
+                        <label htmlFor="add_product_button">Изображение</label>
                         <button id="add_product_button">+</button>
                     </div>
                 </div>

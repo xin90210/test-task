@@ -101,15 +101,16 @@ section {
 
 .card {
   display: flex;
-  width: 300px;
+  width: 320px;
   padding: 20px 15px;
   border: 1px solid black;
   align-items: center;
   border-radius: 5px;
   margin-right: 40px;
   margin-top: 20px;
-  height: 80px;
+  height: 100px;
   background-color: white;
+  overflow-y: hidden;
 }
 
 .card:first-child, .card:nth-child(2) {
@@ -126,6 +127,11 @@ section {
   width: 60px;
   height: 60px;
   padding-right: 20px;
+}
+
+.card p {
+  overflow: hidden;
+  max-height: 65px;
 }
 
 .add_product {

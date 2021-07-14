@@ -1,5 +1,5 @@
 import './App.css';
-import cardIcon from './assets/5.jpg'
+// import cardIcon from './assets/5.jpg'
 
 
 function App0() {
@@ -47,71 +47,7 @@ function App0() {
           </div>
           <div className="products">
             <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
-              <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
-              </div>
-            </div>
-            <div className="card">
-              <img src={cardIcon} className="card_icon" />
+              {/* <img alt="#" src={cardIcon} className="card_icon" /> */}
               <div className="wrapper_card">
                 <h3>name</h3>
                 <h3>price</h3>

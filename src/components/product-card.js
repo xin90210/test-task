@@ -1,14 +1,14 @@
-import cardIcon from '../assets/5.jpg'
 
 
-function ProductCard() {
+
+function ProductCard({ id, name, price, image, description }) {
     return (
-        <div className="card">
-            <img src={cardIcon} className="card_icon" />
+        <div className="card" key={id}>
+            <img alt="#" src={`./images/${image}`} className="card_icon" />
             <div className="wrapper_card">
-                <h3>name</h3>
-                <h3>price</h3>
-                <p>description of product</p>
+                <h3>{name}</h3>
+                <h3>{price}</h3>
+                <p>{description}</p>
             </div>
         </div>
     )
