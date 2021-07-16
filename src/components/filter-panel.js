@@ -1,4 +1,6 @@
-function FilterPanel({ sorting, setSorting }) {
+function FilterPanel({ sorting, setSorting, priceFilter: { min, max }, setPriceFilter }) {
+
+
     return (
         <div className="filter">
             <div className="price">
@@ -6,11 +8,11 @@ function FilterPanel({ sorting, setSorting }) {
                 <div className="price_section">
                     <div className="wrapper_price">
                         <label>от:</label>
-                        <input type="number" min="1199" max="29999" defaultValue="1199" />
+                        <input type="number" onChange={event => setPriceFilter({ min: +event.target.value, max })} value={min} />
                     </div>
                     <div className="wrapper_price">
                         <label>до:</label>
-                        <input type="number" min="1199" max="29999" defaultValue="29999" />
+                        <input type="number" onChange={event => setPriceFilter({ min, max: +event.target.value })} value={max} />
                     </div>
                 </div>
             </div>

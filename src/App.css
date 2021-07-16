@@ -39,10 +39,11 @@ section {
 }
 
 .filter {
-  width: 750px;
+  width: 200px;
   border-right: 1px solid black;
+  flex-shrink: 0;
+  padding-bottom: 60px;
 }
-
 
 .price {
   display: flex;
@@ -60,7 +61,7 @@ section {
   padding-right: 5px;
 }
 
-.wrapper_price > label {
+.wrapper_price>label {
   padding-bottom: 10px;
 }
 
@@ -77,14 +78,13 @@ section {
   display: flex;
 }
 
-.wrapper_currency > button:first-child {
+.wrapper_currency>button:first-child {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   padding: 5px 20px;
 }
 
-
-.wrapper_currency > button:last-child {
+.wrapper_currency>button:last-child {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 5px 20px;
@@ -116,7 +116,6 @@ section {
 .card:first-child, .card:nth-child(2) {
   margin-top: 0;
 }
-
 
 .wrapper_card {
   display: flex;
