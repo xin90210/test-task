@@ -1,5 +1,4 @@
 import { createRef, useState } from 'react';
-import ProductCard from './product-card';
 
 function NewProductForm({ addProduct }) {
 
@@ -13,8 +12,16 @@ function NewProductForm({ addProduct }) {
         }
     }
 
-    const fileInput = createRef()
+    // const [file, setFile] = useState(null);
+    // const handleChange = function loadFile(event) {
+    //     if (event.target.files.length > 0) {
+    //         const file = URL.createObjectURL(event.target.files[0])
+    //         setFile(file)
+    //         console.log(event.target.files)
+    //     }
+    // }
 
+    const fileInput = createRef()
     return (
         <div className="add_product">
             <form onSubmit={handleSubmit}>
@@ -38,8 +45,10 @@ function NewProductForm({ addProduct }) {
                         >
                             +
                         </button>
-                        <input ref={fileInput} type="file" hidden
-                            onChange={event => setNewProduct({ ...newProduct, image: event.target.value })} />
+                        <input ref={fileInput} type="file" hidden accept="image/*"
+                            // onChange={handleChange}
+                            onChange={event => setNewProduct({ ...newProduct, image: event.target.files[0] })}
+                        />
                     </div>
                 </div>
 
