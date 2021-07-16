@@ -12,19 +12,22 @@ function App() {
   const minPrice = Math.min(...prices)
   const maxPrice = Math.max(...prices)
 
+
+
   const [products, setProducts] = useState(data.products)
   const [sorting, setSorting] = useState(`price_ascending`)
   const [priceFilter, setPriceFilter] = useState({ min: minPrice, max: maxPrice })
-  console.log(priceFilter)
+  const [currency, setCurrency] = useState({ name: 'UAH', multiplier: 1 })
 
-
+  const productsToShow = products.map(product => ({ ...product, price: product.price * currency.multiplier, currency: currency.name }))
 
   return (
     <section>
       <div className="wrapper">
         <div className="inner_wrapper">
-          <FilterPanel sorting={sorting} setSorting={setSorting} priceFilter={priceFilter} setPriceFilter={setPriceFilter} />
-          <ProductGrid products={products} sorting={sorting} priceFilter={priceFilter} />
+          <FilterPanel {...{ sorting, setSorting, priceFilter, setPriceFilter, setCurrency, currency }} />
+          <ProductGrid products={productsToShow}
+            sorting={sorting} priceFilter={priceFilter} />
         </div>
         <NewProductForm />
       </div>

@@ -176,3 +176,9 @@ section {
   height: 55px;
   margin-bottom: 60px;
 }
+
+.active {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}

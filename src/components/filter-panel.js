@@ -1,5 +1,9 @@
-function FilterPanel({ sorting, setSorting, priceFilter: { min, max }, setPriceFilter }) {
+function FilterPanel({ sorting, setSorting, priceFilter: { min, max }, setPriceFilter, setCurrency, currency }) {
 
+    function switchCurrency(currency) {
+        setCurrency(currency)
+        setPriceFilter({min: 0, max: max})
+    }
 
     return (
         <div className="filter">
@@ -19,8 +23,8 @@ function FilterPanel({ sorting, setSorting, priceFilter: { min, max }, setPriceF
             <div className="currency">
                 <h2>Валюта</h2>
                 <div className="wrapper_currency">
-                    <button>USD</button>
-                    <button>UAH</button>
+                    <button className={currency.name === 'USD' ? "active" : ''} onClick={() => switchCurrency({ name: 'USD', multiplier: 0.037 })}>USD</button>
+                    <button className={currency.name === 'UAH' ? "active" : ''} onClick={() => switchCurrency({ name: 'UAH', multiplier: 1 })}>UAH</button>
                 </div>
 
             </div>
