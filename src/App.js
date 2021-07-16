@@ -13,7 +13,12 @@ function App() {
   const maxPrice = Math.max(...prices)
 
 
-  const [products, setProducts] = useState(localStorage.products ? JSON.parse(localStorage.products) : data.products)
+  const formatOriginalProducts = () => {
+    const originalProducts = data.products
+    return originalProducts.map((product) => ({ ...product, image: `./images/${product.image}` }))
+  }
+
+  const [products, setProducts] = useState(localStorage.products ? JSON.parse(localStorage.products) : formatOriginalProducts())
   const [sorting, setSorting] = useState(`price_ascending`)
   const [priceFilter, setPriceFilter] = useState({ min: minPrice, max: maxPrice })
   const [currency, setCurrency] = useState({ name: 'UAH', multiplier: 1 })
@@ -22,7 +27,7 @@ function App() {
     const newProducts = [...products, { id: Math.max(...products.map(product => product.id)) + 1, ...product }];
     setProducts(newProducts)
     localStorage.products = JSON.stringify(newProducts)
-    setPriceFilter({min: 0, max: priceFilter.max})
+    setPriceFilter({ min: 0, max: priceFilter.max })
   }
 
   const productsToShow = products.map(product => ({ ...product, price: product.price * currency.multiplier, currency: currency.name }))
