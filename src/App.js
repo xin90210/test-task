@@ -33,16 +33,14 @@ function App() {
   const productsToShow = products.map(product => ({ ...product, price: product.price * currency.multiplier, currency: currency.name }))
 
   return (
-    <section>
-      <div className="wrapper">
-        <div className="inner_wrapper">
-          <FilterPanel {...{ sorting, setSorting, priceFilter, setPriceFilter, setCurrency, currency }} />
-          <ProductGrid products={productsToShow}
-            sorting={sorting} priceFilter={priceFilter} />
-        </div>
-        <NewProductForm addProduct={addProduct} />
+    <div className="wrapper">
+      <div className="inner_wrapper">
+        <FilterPanel {...{ sorting, setSorting, priceFilter, setPriceFilter, setCurrency, currency }} />
+        <ProductGrid products={productsToShow}
+          sorting={sorting} priceFilter={priceFilter} />
       </div>
-    </section>
+      <NewProductForm addProduct={addProduct} />
+    </div>
   );
 }
 

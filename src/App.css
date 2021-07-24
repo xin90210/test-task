@@ -16,18 +16,9 @@ button:hover {
   cursor: pointer;
 }
 
-section {
-  height: 100vh;
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  flex-direction: column;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -43,11 +34,6 @@ section {
   border-right: 1px solid black;
   flex-shrink: 0;
   padding-bottom: 60px;
-}
-
-.price {
-  display: flex;
-  flex-direction: column;
 }
 
 .price_section {
@@ -93,7 +79,6 @@ section {
 .products {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
   max-height: 395px;
   overflow-y: scroll;
   padding: 20px 0px 30px 65px;
@@ -133,12 +118,6 @@ section {
   max-height: 65px;
 }
 
-.add_product {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
-
 .add_product form {
   display: flex;
   padding: 25px;
@@ -162,12 +141,8 @@ section {
   padding-right: 20px;
 }
 
-.form_left_add_product div:first-child, .form_left_add_product div:nth-child(2) {
+.form_left_add_product div {
   padding-bottom: 20px;
-}
-
-.form_left_add_product div:last-child {
-  display: flex;
 }
 
 .form_right_add_product textarea {
