@@ -22,9 +22,13 @@ const sortFunctions = {
 }
 
 function ProductGrid({ products, sorting, priceFilter: { min, max } }) {
+
+    const productsToShow = products.filter(product => product.price >= min && product.price <= max)
+    const sortedProducts = productsToShow.sort(sortFunctions[sorting])
+
     return (
         <div className="products">
-            {products.filter(product => product.price >= min && product.price <= max).sort(sortFunctions[sorting]).map(ProductCard)}
+            {sortedProducts.map(ProductCard)}
         </div>
     )
 }
